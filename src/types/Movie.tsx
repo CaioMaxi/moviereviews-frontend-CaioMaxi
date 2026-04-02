@@ -5,5 +5,5 @@ export interface Movie {
     runtime: number;
     imageURL: string;
     releaseDate: string;
-    createdDate: string;
+    // createdDate: string;
 }
