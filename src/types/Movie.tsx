@@ -4,6 +4,7 @@ export interface Movie {
     synopsis: string;
     runtime: number;
     imageURL: string;
+    averageRating: number;
     releaseDate: string;
     // createdDate: string;
 }

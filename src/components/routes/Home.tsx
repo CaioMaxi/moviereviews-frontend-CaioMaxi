@@ -20,15 +20,17 @@ export default function Home() {
         <>
             <h2>Home - MovieReviews</h2>
 
-            {
-                movies.length > 0 && (
-                    movies.map(movie => (
-                        <Link key={movie.id} to={`/details/${movie.id}`}>
-                            <MovieCard movie={movie} />
-                        </Link>
-                    ))
-                )
-            }
+            <div>
+                {
+                    movies.length > 0 && (
+                        movies.map(movie => (
+                            <Link key={movie.id} to={`/details/${movie.id}`}>
+                                <MovieCard movie={movie} />
+                            </Link>
+                        ))
+                    )
+                }
+            </div>
         </>
     );
 }
