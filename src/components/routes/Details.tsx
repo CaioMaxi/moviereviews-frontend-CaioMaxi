@@ -16,18 +16,15 @@ export default function Details() {
             setMovie(movie)
         }
 
-        fetchDataMovie()
-    }, []) // run only once
-
-    useEffect(() => {
         const fetchDataReview = async () => {
             const res = await fetch(import.meta.env.VITE_API_HOST + 'api/moviereviews?movieId=' + id); // e.g. https://localhost:7195/api/moviereviews?movieId=4
             const review = await res.json();
             setReview(review)
         }
 
+        fetchDataMovie()
         fetchDataReview()
-    }, [])
+    }, []) // run only once
 
     return (
         <>
@@ -48,15 +45,16 @@ export default function Details() {
                 </div>
                 <div>
                     <dl className="row">
-
-                        {review.filter(rev => rev.isPublished)
-                            .map((rev) => (rev.name, rev.critic)
-                                // (rev.name,
-                                // rev.critic)
-                            
-
-                            )}
-
+                        {review.map((rev =>
+                            <>
+                                <dt className="col-sm-2">Name</dt>
+                                <dd className="col-sm-10">{rev.name}</dd>
+                                <dt className="col-sm-2">Review</dt>
+                                <dd className="col-sm-10">{rev.reviewRating}</dd>
+                                <dt className="col-sm-2">Critic</dt>
+                                <dd className="col-sm-10">{rev.critic}</dd>
+                            </>
+                        ))}
                     </dl>
                 </div>
             </dl>
