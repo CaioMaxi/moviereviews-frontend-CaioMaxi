@@ -19,8 +19,8 @@ export default function Layout() {
                 <Outlet />
             </main>
 
-            <footer className="container mt-4">
-                <p className="text-muted">Copyright 2026 - MovieReviews</p>
+            <footer className="footer container mt-4">
+                <p className="text-secondary">Copyright 2026 - MovieReviews</p>
             </footer>
         </>
     )

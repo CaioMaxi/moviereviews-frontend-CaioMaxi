@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
 import type { Movie } from "../../types/Movie";
 import MovieCard from "../MovieCard";
 
@@ -18,18 +17,16 @@ export default function Home() {
 
     return (
         <>
-            <h2>Home - MovieReviews</h2>
-
-            <div>
-                {
-                    movies.length > 0 && (
-                        movies.map(movie => (
-                            <Link key={movie.id} to={`/details/${movie.id}`}>
+            <div className="container text-center">
+                <div className="row row-cols-auto">
+                    {
+                        movies.length > 0 && (
+                            movies.map(movie => (
                                 <MovieCard movie={movie} />
-                            </Link>
-                        ))
-                    )
-                }
+                            ))
+                        )
+                    }
+                </div>
             </div>
         </>
     );

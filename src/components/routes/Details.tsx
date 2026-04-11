@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import type { Movie } from "../../types/Movie";
 import type { Review } from "../../types/Review";
+import MovieDetailCard from "../MovieDetailCard";
 
 export default function Details() {
     const { id } = useParams();
@@ -28,36 +29,8 @@ export default function Details() {
 
     return (
         <>
-            <h2>Details - {movie?.title}</h2>
-            <dl>
-                <img src={movie?.imageURL} alt={movie?.title} className="w-15" />
-                <div>
-                    <dl className="row">
-                        <dt className="col-sm-2">Title</dt>
-                        <dd className="col-sm-10">{movie?.title}</dd>
-                        <dt className="col-sm-2">Synopsis</dt>
-                        <dd className="col-sm-10">{movie?.synopsis}</dd>
-                        <dt className="col-sm-2">Runtime</dt>
-                        <dd className="col-sm-10">{movie?.runtime}</dd>
-                        <dt className="col-sm-2">Release Date</dt>
-                        <dd className="col-sm-10">{movie?.releaseDate}</dd>
-                    </dl>
-                </div>
-                <div>
-                    <dl className="row">
-                        {review.map((rev =>
-                            <>
-                                <dt className="col-sm-2">Name</dt>
-                                <dd className="col-sm-10">{rev.name}</dd>
-                                <dt className="col-sm-2">Review</dt>
-                                <dd className="col-sm-10">{rev.reviewRating}</dd>
-                                <dt className="col-sm-2">Critic</dt>
-                                <dd className="col-sm-10">{rev.critic}</dd>
-                            </>
-                        ))}
-                    </dl>
-                </div>
-            </dl>
+            <MovieDetailCard movie={movie} review={review}/>
+
             <p>
                 Go to home page. <Link to='/'>Home</Link>
             </p>
