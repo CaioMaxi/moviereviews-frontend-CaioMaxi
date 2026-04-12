@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router";
 export default function Layout() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-dark border-bottom">
+            <nav className="navbar navbar-dark navbar-expand-lg bg-dark border-bottom">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
                         <img src="public\MovieReviewsLogo1.png" alt="MovieReviews" className="logo" />
@@ -17,7 +17,7 @@ export default function Layout() {
                                 <Link className="nav-link active text-light" to="/" aria-current="page">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active text-light" to="" aria-current="page">About Us</Link>
+                                <Link className="nav-link active text-light" to="/about-us" aria-current="page">About Us</Link>
                             </li>
                         </ul>
                     </div>

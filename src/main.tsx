@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
 import Home from './components/routes/Home'
 import Details from './components/routes/Details'
+import AboutUs from './components/routes/AboutUs';
 import Layout from './components/routes/Layout';
 
 createRoot(document.getElementById('root')!).render(
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path='/details/:id' element={<Details />} />
+          <Route path='/about-us' element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter>
