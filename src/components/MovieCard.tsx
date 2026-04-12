@@ -3,7 +3,7 @@ import type { Movie } from "../types/Movie";
 
 export default function MovieCard(props: { movie: Movie }) {
     return (
-        <Link key={props.movie.id} to={`/details/${props.movie.id}`} className="mb-4 text-decoration-none">
+        <Link key={props.movie.id} to={`/details/${props.movie.id}`} className="mb-4 text-decoration-none mx-auto">
             <div className="col card border-light h-100 bg-black thumbnail">
                 <img src={props.movie.imageURL} alt={props.movie.title} className="card-img-top" />
                 <div className="card-body">

@@ -1,6 +1,7 @@
 body {
     background-color: rgb(24, 24, 24);
     color: white;
+    padding-bottom: 150px;
 }
 
 .thumbnail {
@@ -14,4 +15,8 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+.logo {
+    width: 100px
 }

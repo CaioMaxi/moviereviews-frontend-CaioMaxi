@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
 import type { Movie } from "../../types/Movie";
 import type { Review } from "../../types/Review";
 import MovieDetailCard from "../MovieDetailCard";
@@ -30,10 +30,6 @@ export default function Details() {
     return (
         <>
             <MovieDetailCard movie={movie} review={review}/>
-
-            <p>
-                Go to home page. <Link to='/'>Home</Link>
-            </p>
         </>
     );
 }
